@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Red Hat Text';
+    src: local('Red Hat Text Bold'), local('RedHatText-Bold'),
+        url('RedHatText-Bold.woff2') format('woff2'),
+        url('RedHatText-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: local('Red Hat Text Light'), local('RedHatText-Light'),
+        url('RedHatText-Light.woff2') format('woff2'),
+        url('RedHatText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: local('Red Hat Text Medium'), local('RedHatText-Medium'),
+        url('RedHatText-Medium.woff2') format('woff2'),
+        url('RedHatText-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: local('Red Hat Text Regular'), local('RedHatText-Regular'),
+        url('RedHatText-Regular.woff2') format('woff2'),
+        url('RedHatText-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+

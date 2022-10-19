@@ -1,0 +1,358 @@
+
+@import url('../assets/fonts/stylesheet.css');
+/* ==================== Varibels ==================== */
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white:hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --mostly-black: hsl(234, 17%, 12%); 
+  --font-size: 14px;
+}
+/* ==================== Reset ==================== */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+  font-family: "Red Hat Text", serif;
+  letter-spacing: -0.001px;
+  word-spacing: -0.04rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h1 {
+  line-height: 2.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  letter-spacing: 1px;
+  overflow-wrap: break-word;
+}
+/* ==================== Launch countdown timer ==================== */
+.timer {
+  min-height: 98vh;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(300px, auto) 1fr 1fr / 1fr;
+  grid-template-areas: "title" "list" "social" "stars" "hill";
+}
+
+.timer__title {
+  grid-area: title;
+  position: absolute;
+  left: 40%;
+  top: 12%;
+  text-align: center;
+  font-size: clamp(1.2rem, 1rem + 1.5vw, 2rem);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.timer__list {
+  grid-area: list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+}
+
+.timer__counter {
+  width: 12rem;
+  position: relative;
+  height: 12rem;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__days,
+.timer__hours,
+.timer__seconds,
+.timer__minutes {
+  margin-top: 22%;
+  color: var(--soft-red);
+  text-align: center;
+  font-weight: 500;
+  font-size: 5em;
+}
+
+.timer__counter::after {
+  content: '';
+  background-color: var(--very-dark-blue);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  bottom: 50%;
+  left: -3%;
+}
+
+.timer__counter::before {
+  content: '';
+  background-color: var(--very-dark-blue);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  bottom: 50%;
+  right: -3%;
+}
+
+.timer__span {
+  margin-top: 2em;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+}
+
+.timer__cont {
+  margin-top: 13em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timer__social {
+  position: absolute;
+  left: 44%;
+  bottom: 25%;
+  grid-area: social;
+  display: grid;
+  grid-template: 1fr / repeat(3, minmax(100px, auto));
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+
+.timer__link {
+  cursor: pointer;
+}
+
+.timer__hill {
+  grid-area: stars;
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.timer__hill img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.timer__stars {
+  grid-area: hill;
+  top: 0;
+  position: absolute;
+  height: 55%;
+  width: 100%;
+}
+
+.timer__stars img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media(max-width:106.25em) {
+  .timer__title {
+    left: 39%;
+  }
+
+  .timer__social {
+    left: 43%;
+  }
+}
+
+@media(min-width:90em) {
+  .timer__link:hover,
+  .timer__link:focus {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
+}
+
+@media(max-width:87.5em) {
+  .timer__title {
+    left: 37%;
+  }
+
+  .timer__social {
+    left: 41%;
+  }
+}
+
+@media(max-width:68.75em) {
+  .timer__title {
+    left: 35%;
+  }
+
+  .timer__social {
+    left: 39%;
+  }
+}
+
+@media(max-width:50em) {
+  .timer__title {
+    left: 30%;
+  }
+
+  .timer__social {
+    left: 37%;
+  }
+}
+
+@media(max-width:59.375em) {
+  .timer__title {
+    top: 17%;
+    font-size: 1.5rem;
+  }
+
+  .timer__counter {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .timer__days,
+  .timer__hours,
+  .timer__seconds,
+  .timer__minutes {
+    font-size: 3em;
+  }
+
+  .timer__counter::after {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .timer__counter::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .timer__list {
+    grid-area: list;
+    display: grid;
+    grid-template: 1fr / 1fr repeat(4, minmax(50px, auto)) 1fr;
+    gap: 0.5em;
+  }
+
+  .timer__social {
+    bottom: 35%;
+    gap: 1.1em;
+    grid-template: 1fr / repeat(3, minmax(75px, auto));
+  }
+}
+
+@media(max-width:40.625em) {
+  .timer__title {
+    font-size: 1.1rem;
+    top: 17%;
+  }
+
+  .timer__counter {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .timer__counter::after {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .timer__counter::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .timer__days,
+  .timer__hours,
+  .timer__seconds,
+  .timer__minutes {
+    font-size: 2em;
+  }
+
+  .timer__list {
+    grid-area: list;
+    display: grid;
+    grid-template: 1fr / 1fr repeat(4, minmax(30px, auto)) 1fr;
+    gap: 0.9em;
+  }
+
+  .timer__social {
+    grid-template: 1fr / repeat(3, minmax(50px, auto));
+  }
+}
+
+
+@media(max-width:12em) {
+  .timer__title {
+    font-size: 1rem;
+    top: 17%;
+  }
+
+  .timer__counter {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .timer__counter::after {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .timer__counter::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timer__days,
+  .timer__hours,
+  .timer__seconds,
+  .timer__minutes {
+    font-size: 1em;
+  }
+}

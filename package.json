@@ -1,0 +1,19 @@
+{
+  "name": "launch-countdown-timer",
+  "version": "1.0.0",
+  "description": "training project for community frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "test": "tailwindcss build -i css/ff.css -o public/styles.css",
+    "run": "tailwindcss -i css/ff.css -o public/styles.css --watch"
+  },
+  "keywords": [
+    "frontend-mentor"
+  ],
+  "author": "pink-doublethink",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8"
+  }
+}
