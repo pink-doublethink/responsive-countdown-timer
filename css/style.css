@@ -1,4 +1,4 @@
-
+@import url('./open-props.css');
 @import url('../assets/fonts/stylesheet.css');
 /* ==================== Varibels ==================== */
 :root {
@@ -83,7 +83,7 @@ body {
   text-align: center;
   font-size: clamp(1.2rem, 1rem + 1.5vw, 2rem);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--font-weight-7);
 }
 
 .timer__list {
@@ -111,7 +111,7 @@ body {
   margin-top: 22%;
   color: var(--soft-red);
   text-align: center;
-  font-weight: 500;
+  font-weight: var(--font-weight-5);
   font-size: 5em;
 }
 
