@@ -37,12 +37,12 @@ jQuery(($) => {
         };
         
         function updateClock() {
-            let t = getTimeRemaining(endtime);
-            $(days).html(getZero(t.days));
-            $(hours).html(getZero(t.hours));
-            $(minutes).html(getZero(t.minutes));
-            $(seconds).html(getZero(t.seconds));
-            if (t.total <= 0) {
+            let time = getTimeRemaining(endtime);
+            $(days).html(getZero(time.days));
+            $(hours).html(getZero(time.hours));
+            $(minutes).html(getZero(time.minutes));
+            $(seconds).html(getZero(time.seconds));
+            if (time.total <= 0) {
                 clearInterval(timeInterval);
             }
         }
