@@ -1,5 +1,6 @@
 jQuery(($) => {
-    const deadline = '2022-11-14';
+    const deadline = new Date();
+    deadline.setDate(deadline.getDate() + 36);
     function getTimeRemaining(endtime) {
 	    let days, hours, minutes, seconds;
 	    let t = Date.parse(endtime) - Date.parse(new Date());
